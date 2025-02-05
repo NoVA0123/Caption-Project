@@ -1,0 +1,46 @@
+{
+   "file_path":{
+        "json_path":{
+            "train_json": "/kaggle/input/coco-dataset-specific/annotations_trainval2017/annotations/captions_train2017.json",
+            "validation_json": "/kaggle/input/coco-dataset-specific/annotations_trainval2017/annotations/captions_val2017.json"
+        },
+        "image_path":{
+            "train_path": "/kaggle/input/coco-dataset-specific/train2017/train2017/",
+            "validation_path": "/kaggle/input/coco-dataset-specific/val2017/val2017/",
+            "test_image_path": "/kaggle/input/coco-dataset-specific/val2017/val2017/000000000139.jpg"
+        }
+    },
+    "cnn_model_config":{
+        "existing_path": null,
+        "specific_download_path": null
+    },
+    "tokenizer_config":{
+        "tokenizer_save_path": null,
+        "tokenizer_load_path": "/kaggle/working/Caption-and-Detection/tokenizer.json"
+    },
+    "transformer_config":{
+        "continue": 1,
+        "model_name": "gpt-2",
+        "block_size": 128,
+        "vocab_size": 30080,
+        "number_layers": 3,
+        "number_heads": 12,
+        "d_model": 384 
+    },
+    "model_config":{
+        "existing_path": "/kaggle/input/captionmodel-stage-1/pytorch/default/1/caption_model.pt",
+        "batch_size": 64,
+        "epochs": 16,
+        "dtype": "fp16",
+        "learning_rate":{
+            "max_lr": 6e-4,
+            "warmup_steps": 10,
+            "max_steps": 500,
+            "test": 0
+        }
+    },
+    "dataset_config": {
+        "max_sample": 524288
+    },
+    "saved_model_path":"/kaggle/input/caption-model/pytorch/default/1/caption_model.pt"
+}
